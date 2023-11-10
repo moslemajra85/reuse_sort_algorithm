@@ -1,9 +1,14 @@
+import { LinkedList } from './LinkedList';
 import { Sorter } from './Sorter';
-import { NumbersCollection } from './NumbersCollection';
 
-const numbersCollection = new NumbersCollection([12, -1, 0, -4, 7]);
-const sorter = new Sorter(numbersCollection);
+const list = new LinkedList();
+list.add(1);
+list.add(0);
+list.add(17);
+list.add(5);
 
+list.print();
+const sorter = new Sorter(list);
 sorter.sort();
-console.log(numbersCollection.data);
- 
+console.log('#######################');
+list.print();

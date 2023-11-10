@@ -1,4 +1,5 @@
 import { CharactersCollection } from '../CharactersCollection';
+import { LinkedList } from '../LinkedList';
 import { NumbersCollection } from '../NumbersCollection';
 import { Sorter } from '../Sorter';
 
@@ -21,4 +22,21 @@ describe('Sorter', () => {
 
     expect(charactersCollection.data).toMatch(/aaaX/);
   });
+
+  it('should sort a Linkedlist', () => {
+        
+    const list = new LinkedList()
+    list.add(1)
+    list.add(0)
+    list.add(17)
+    list.add(5)
+
+    const sorter = new Sorter(list)
+    sorter.sort()
+
+    expect(list.at(0).data).toBe(0)
+    expect(list.at(1).data).toBe(1)
+    expect(list.at(2).data).toBe(5)
+    expect(list.at(3).data).toBe(17)
+   })
 });
