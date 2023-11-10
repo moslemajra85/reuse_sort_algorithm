@@ -16,5 +16,8 @@ class NumbersCollection {
         this.data[leftIndex] = this.data[rightIndex];
         this.data[rightIndex] = leftHand;
     }
+    getData() {
+        return this.data;
+    }
 }
 exports.NumbersCollection = NumbersCollection;
