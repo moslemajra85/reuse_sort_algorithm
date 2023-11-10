@@ -1,13 +1,17 @@
 // This is not a full implementation of a linked list
 // we will just implement things that are relevent to
+
+import { Sorter } from './Sorter';
+
 // our app
 class Node {
   next: Node | null = null;
 
-  constructor(public data: number) {}
+  constructor(public data: number) {
+   }
 }
 
-export class LinkedList {
+export class LinkedList extends Sorter{
   head: Node | null = null;
 
   add(data: number): void {
@@ -59,7 +63,6 @@ export class LinkedList {
 
     throw new Error('Index out of bounds');
   }
-
 
   compare(leftIndex: number, rightIndex: number): boolean {
     if (!this.head) {

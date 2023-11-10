@@ -1,8 +1,9 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.LinkedList = void 0;
 // This is not a full implementation of a linked list
 // we will just implement things that are relevent to
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LinkedList = void 0;
+const Sorter_1 = require("./Sorter");
 // our app
 class Node {
     constructor(data) {
@@ -10,8 +11,9 @@ class Node {
         this.next = null;
     }
 }
-class LinkedList {
+class LinkedList extends Sorter_1.Sorter {
     constructor() {
+        super(...arguments);
         this.head = null;
     }
     add(data) {
